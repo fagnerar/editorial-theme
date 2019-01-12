@@ -1,0 +1,27 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 5px solid $color-accent;
+
+    @include respond(desktop) {
+        padding-top: 9.532rem;
+    }
+
+    & h2 {
+        font-size: 1.65rem;
+
+        @include respond(desktop) {
+            font-size: 1.648rem;
+        }
+        @include respond(tab-port) {
+            font-size: 1.832rem;
+        }
+
+        & span {
+            font-weight: 400;
+            color: $color-grey;
+        }
+    }
+}

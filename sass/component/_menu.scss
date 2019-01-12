@@ -1,0 +1,58 @@
+.menu {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2rem;
+
+    & a {
+        display: block;
+        padding: .74333rem 0;
+        transition: color .2s;
+    }
+
+    & a:hover {
+        color: $color-accent;
+    }
+    
+    &__list {
+        color: $color-grey-dark;
+    }
+    &__item {
+        font-size: 1.18833rem;
+        letter-spacing: .1rem;
+        line-height: 1.634;
+
+        &:not(:last-child) {
+            padding-bottom: .66rem;
+            margin-bottom: .66rem;
+            border-bottom: 1px solid $color-border;
+        }
+    }
+}
+
+.opener {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    & a {
+        flex: 1;
+    }
+
+    & a:hover + &__icon {
+        fill: $color-accent;
+    }
+
+    &__icon {
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        margin-left: -2rem;
+        fill: $color-grey-light-2;
+        pointer-events: none;
+        transition: transform .2s ease-in-out, fill .2s ease-in-out;
+        
+        &--rotate {
+            transform: rotate(-180deg);
+        }
+    }
+}

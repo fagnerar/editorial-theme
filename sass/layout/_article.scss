@@ -1,0 +1,10 @@
+.article {
+    padding-top: 7.333333rem;
+
+    @include respond(desktop) {
+        padding-top: 5.86rem;
+    }
+    @include respond(tab-port-sm) {
+        padding-top: 4.395rem;
+    }
+}

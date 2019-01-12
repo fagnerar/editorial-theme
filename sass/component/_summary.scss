@@ -1,0 +1,30 @@
+.summary {
+    &:not(:first-child) {
+        padding-top: 2.4rem;
+        border-top: 1px solid $color-border;
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: transform .2s linear;
+
+        &:hover {
+            transform: scale(1.08);
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__p {
+        font-size: 1.32rem;
+        margin-bottom: 2.4rem;
+    }
+}

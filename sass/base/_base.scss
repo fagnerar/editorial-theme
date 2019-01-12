@@ -1,0 +1,22 @@
+*,
+*::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //10px
+
+    @include respond(desktop) {
+        font-size: 56.825%;
+    }
+    @include respond(phone-sm) {
+        font-size: 51.1426%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+}

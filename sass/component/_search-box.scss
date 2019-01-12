@@ -1,0 +1,39 @@
+.search-box {
+    background-color: #eff1f2;
+    padding: 2.2rem;
+    margin: -2.2rem -2rem 4.4rem -2.2rem;
+
+    &__form {
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 1.613;
+        color: inherit;
+        padding: 0 4.0333rem 0 1.46667rem;
+        width: 100%;
+        height: 4.0333rem;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid $color-border;
+
+        &:focus {
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid $color-accent;
+            box-shadow: 0 0 0 1px $color-accent;
+        }
+    }
+
+    &__icon {
+        fill: $color-border;
+        transform: rotateY(180deg);
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        margin-left: -3rem;
+    }
+}

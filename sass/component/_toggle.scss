@@ -1,0 +1,44 @@
+.toggle {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66px;
+    height: 82.5px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: -66px;
+
+    @include respond(desktop) {
+        width: 72px; //7.92rem;
+        height: 75px; //8.25rem;
+    }
+    @include respond(tab-port) {
+        background-color: rgba($color-border, .5);
+        border-radius: 5px;
+        top: 12px;
+        right: -72px;
+        width: 60px;
+        height: 42px
+    }
+    
+    &__icon {
+        fill: $color-accent;
+        display: block;
+        width: 24px;
+        height: 24px;
+
+        @include respond(desktop) {
+            margin-left: -1.1rem;
+        }
+
+        @include respond(tab-port) {
+            fill: $color-grey;
+            width: 18px;
+            height: 18px;
+            margin-left: 0;
+        }
+    }
+}

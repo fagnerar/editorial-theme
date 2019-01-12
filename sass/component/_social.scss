@@ -1,0 +1,31 @@
+.social {
+    display: flex;
+
+    @include respond(tab-port) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0 2.93rem 0 0;
+    }
+
+    &__item {
+        display: inline-block;
+        height: 1.8rem;
+        width: 1.8rem;
+        margin-left: 1.8rem;
+
+    }
+    &__svg {
+        height: 1.8rem;
+        width: 1.8rem;
+        fill: currentColor;
+        transition: fill .2s ease;
+
+        @include respond(tab-port) {
+            height: 7.332rem;
+        }
+    }
+    &__item a:hover &__svg {
+        fill: $color-accent;
+    }
+}

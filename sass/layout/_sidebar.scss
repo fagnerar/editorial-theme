@@ -1,0 +1,48 @@
+.sidebar {
+    background-color: $color-grey-light;
+    position: relative;
+    margin-left: 0;
+    width: 31.68rem;
+    transition: margin-left .5s ease-in-out, box-shadow .5s ease-in-out;
+
+    @include respond(desktop) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translateX(0);
+        z-index: 9999;
+        height: 100%;
+        box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
+    }
+
+    &__section {
+        margin-bottom: 5rem;
+        &:not(:last-child) {
+            padding-bottom: 5rem;
+            border-bottom: 2px solid $color-border;
+        }
+    }
+
+    &.inactive {
+        margin-left: -31.68rem;
+        
+        @include respond(desktop) {
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
+    }
+
+    & .inner {
+        padding: 2.2rem 2.2rem 1.76rem;
+        width: 31.68rem;
+        background-color: transparent;
+
+        @include respond(desktop) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto; 
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.content {
+    flex: 1;
+    padding: 0 7.3333rem;
+    position: relative;
+
+    @include respond(desktop) {
+        padding: 0 5.86rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 0 2.93rem;
+    }
+
+    & p {
+        margin-bottom: 2.9333rem;
+    }
+}

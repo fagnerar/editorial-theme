@@ -1,0 +1,117 @@
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 7.3333rem;
+    border-bottom: 2px solid $color-border;
+
+    @include respond(desktop) {
+        padding-bottom: 5.866rem;
+    }
+
+    &__feature {
+        width: calc(50% - 2.2rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4.4rem;
+
+        @include respond(phone) {
+            flex-direction: column;
+            align-items: flex-start; 
+        }
+
+        &:nth-child(odd) {
+            margin-right: 2.2rem;
+        }
+
+        &:nth-child(even) {
+            margin-left: 2.2rem;
+        }
+
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+
+        @include respond(tab-land) {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin: 0 0 4.395rem;
+            }
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    &__icon-wrapper {
+        min-width: 14.6667rem;
+        min-height: 14.6667rem;
+        margin-right: 2.9333rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        @include respond(tab-land) {
+            min-width: 11.732rem;
+            min-height: 11.732rem;
+        }
+        
+        @include respond(phone) {
+            min-width: 8.799rem;
+            min-height: 8.799rem;
+            margin: 0 0 2.198rem;
+        }
+
+        &::after {
+            content: '';
+            width: 10.2667rem;
+            height: 10.2667rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            border: 2px solid $color-border;
+            border-radius: 5px;
+
+            @include respond(tab-land) {
+                width: 8.799rem;
+                height: 8.799rem;
+            }
+
+            @include respond(phone) {
+                width: 5.866rem;
+                height: 5.866rem;
+            }
+        }
+    }
+    &__icon {
+        width: 4.4rem;
+        height: 4.4rem;
+        align-items: center;
+        justify-content: center;
+        fill: $color-accent;
+
+        @include respond(tab-land) {
+            width: 3.96rem;
+            height: 3.96rem;
+        }
+        @include respond(phone) {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+        @include respond(phone-sm) {
+            width: 2.445rem;
+            height: 2.445rem;
+        }
+    }
+
+    &__text {
+        & p {
+            margin-bottom: 0;
+        }
+    }
+}

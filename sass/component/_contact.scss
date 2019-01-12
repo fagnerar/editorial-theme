@@ -1,0 +1,29 @@
+.contact {
+    font-size: 1.32rem;
+    
+    @include dotted-links;
+
+    &__p {
+        font-size: 1.32rem;
+        margin-bottom: 2.4rem;
+    }
+
+    &__item {
+        text-transform: none;
+        display: flex;
+
+        &:not(:last-child) {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid $color-border;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        fill: $color-accent;
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,21 @@
+.submenu {
+    display: none;
+    width: 100%;
+    padding-left: 1.32rem;
+    margin: .66rem 0 1.98rem 0;
+    font-size: 1.05667rem;
+    color: $color-grey-light-2;
+
+    & li {
+        margin-top: .165rem;
+        padding-top: .165rem;
+    }
+
+    & a {
+        padding: .66rem 0;
+    }
+
+    &.d-block {
+        display: block;
+    }
+}
